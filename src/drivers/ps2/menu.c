@@ -193,10 +193,10 @@ static int menu_input(int port, int center_screen)
             Settings.offset_y = 0;
             change = 1;
         }
-        if (new_pad[port] & PAD_CIRCLE) {
+        if (new_pad[port] & PAD_CROSS) {
             selected = 1;
         }
-        if (new_pad[port] & PAD_CROSS) {
+        if (new_pad[port] & PAD_CIRCLE) {
         }
         if ((new_pad[port] == Settings.PlayerInput[port][0]
           || new_pad[port] == PAD_TRIANGLE) && !center_screen) {
