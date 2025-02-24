@@ -2,7 +2,7 @@
 # GCC 3.2.3 / PS2SDK 1.2 / GSKIT / JPG / PNG
 #------------------------------------------------------------------
 #no cdfs support, 1 - have support
-CDSUPPORT = 0
+CDSUPPORT = 1
 DEBUG = 0
 EE_BIN = fceu.elf
 EE_PACKED_BIN = fceu-packed.elf
