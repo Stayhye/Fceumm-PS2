@@ -734,8 +734,8 @@ static void padbuttonToStr(u16 button, char button_name[9])
         "Left     \xFF""<" ,
         "L2"    , "R2"   , "L1"  , "R1"   ,
         "Triangle \xFF""3",
-        "Circle   \xFF""0",
-        "Cross    \xFF""1",
+        "Circle   \xFF""1",
+        "Cross    \xFF""0",
         "Square   \xFF""2"
     };
     strcpy(button_name, buttons[i]);
