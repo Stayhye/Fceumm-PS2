@@ -115,11 +115,16 @@ void InitPS2()
     SifExecModuleBuffer(&fileXio_irx, size_fileXio_irx, 0, NULL, NULL);
     SifExecModuleBuffer(&freesio2_irx, size_freesio2_irx, 0, NULL, NULL);
 
+    SifLoadModule("rom0:SIO2MAN", 0, NULL);
+	  SifLoadModule("rom0:MCMAN", 0, NULL);
+	  SifLoadModule("rom0:MCSERV", 0, NULL);
+	  SifLoadModule("rom0:PADMAN", 0, NULL);
+/*
     SifExecModuleBuffer(&mcman_irx, size_mcman_irx, 0, NULL, NULL);
     SifExecModuleBuffer(&mcserv_irx, size_mcserv_irx, 0, NULL, NULL);
     SifExecModuleBuffer(&freemtap_irx, size_freemtap_irx, 0, NULL, NULL);
     SifExecModuleBuffer(&freepad_irx, size_freepad_irx, 0, NULL, NULL);
-
+*/
 #ifdef SOUND_ON
     SifExecModuleBuffer(&freesd_irx, size_freesd_irx, 0, NULL, NULL);
     SifExecModuleBuffer(&audsrv_irx, size_audsrv_irx, 0, NULL, NULL);
