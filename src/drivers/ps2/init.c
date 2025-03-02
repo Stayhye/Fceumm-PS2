@@ -111,20 +111,20 @@ void InitPS2()
 
     sbv_patch_enable_lmb();
 
-    SifExecModuleBuffer(&iomanX_irx, size_iomanX_irx, 0, NULL, NULL);
-    SifExecModuleBuffer(&fileXio_irx, size_fileXio_irx, 0, NULL, NULL);
-    SifExecModuleBuffer(&freesio2_irx, size_freesio2_irx, 0, NULL, NULL);
+    //SifExecModuleBuffer(&iomanX_irx, size_iomanX_irx, 0, NULL, NULL);
+    //SifExecModuleBuffer(&fileXio_irx, size_fileXio_irx, 0, NULL, NULL);
+    //SifExecModuleBuffer(&freesio2_irx, size_freesio2_irx, 0, NULL, NULL);
 
-    SifLoadModule("rom0:SIO2MAN", 0, NULL);
-	  SifLoadModule("rom0:MCMAN", 0, NULL);
-	  SifLoadModule("rom0:MCSERV", 0, NULL);
-	  SifLoadModule("rom0:PADMAN", 0, NULL);
-/*
-    SifExecModuleBuffer(&mcman_irx, size_mcman_irx, 0, NULL, NULL);
-    SifExecModuleBuffer(&mcserv_irx, size_mcserv_irx, 0, NULL, NULL);
-    SifExecModuleBuffer(&freemtap_irx, size_freemtap_irx, 0, NULL, NULL);
-    SifExecModuleBuffer(&freepad_irx, size_freepad_irx, 0, NULL, NULL);
-*/
+    SifLoadModule("cdrom0:/1.IRX", 0, NULL);
+    SifLoadModule("rcdom0:/2.IRX", 0, NULL);
+    SifLoadModule("cdrom0:/3.IRX", 0, NULL);
+    SifLoadModule("cdrom0:/4.IRX", 0, NULL);
+
+    //SifExecModuleBuffer(&mcman_irx, size_mcman_irx, 0, NULL, NULL);
+    //SifExecModuleBuffer(&mcserv_irx, size_mcserv_irx, 0, NULL, NULL);
+    //SifExecModuleBuffer(&freemtap_irx, size_freemtap_irx, 0, NULL, NULL);
+    //SifExecModuleBuffer(&freepad_irx, size_freepad_irx, 0, NULL, NULL);
+
 #ifdef SOUND_ON
     SifExecModuleBuffer(&freesd_irx, size_freesd_irx, 0, NULL, NULL);
     SifExecModuleBuffer(&audsrv_irx, size_audsrv_irx, 0, NULL, NULL);
