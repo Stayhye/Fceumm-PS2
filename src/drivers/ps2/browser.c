@@ -300,15 +300,9 @@ int listpfs(char *path, entries *FileEntry, int files_too)
     iox_dirent_t buf;
 
     if (!(strchr(path, '/'))) { // If path is not valid then load default device menu
-        strcpy(FileEntry[0].displayname, "mc0:");
-        strcpy(FileEntry[1].displayname, "mc1:");
-        strcpy(FileEntry[2].displayname, "mass:");
-        strcpy(FileEntry[3].displayname, "hdd0:");
+        
         strcpy(FileEntry[4].displayname, "cdfs:");
-        strcpy(FileEntry[0].filename, "mc0:/");
-        strcpy(FileEntry[1].filename, "mc1:/");
-        strcpy(FileEntry[2].filename, "mass:/");
-        strcpy(FileEntry[3].filename, "hdd0:/");
+       
         strcpy(FileEntry[4].filename, "cdfs:/");
         FileEntry[0].dircheck = 1;
         FileEntry[1].dircheck = 1;
