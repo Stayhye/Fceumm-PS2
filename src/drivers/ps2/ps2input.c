@@ -215,21 +215,21 @@ static unsigned char Get_PS2Input(int mport)
             P |= JOY_B;
         }
         if (paddata[mport] & Settings.PlayerInput[mport][7]) {
-            P |= JOY_SELECT;
+            P |= JOY_START;
         }
         if (paddata[mport] & Settings.PlayerInput[mport][8]) {
-            P |= JOY_START;
+            P |= JOY_SELECT;
         }
         // Analog
         if ((buttons[mport].mode >> 4) == 0x07) {
             if (buttons[mport].ljoy_h < 64)
-                P |= JOY_LEFT;
-            else if (buttons[mport].ljoy_h > 192)
                 P |= JOY_RIGHT;
+            else if (buttons[mport].ljoy_h > 192)
+                P |= JOY_LEFT;
             if (buttons[mport].ljoy_v < 64)
-                P |= JOY_UP;
-            else if (buttons[mport].ljoy_v > 192)
                 P |= JOY_DOWN;
+            else if (buttons[mport].ljoy_v > 192)
+                P |= JOY_UP;
         }
         // Digital
         if (paddata[mport] & Settings.PlayerInput[mport][9]) {
