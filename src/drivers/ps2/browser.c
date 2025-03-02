@@ -131,7 +131,7 @@ int RomBrowserInput(int files_too, int inside_menu)
                 oldselect = -1;
             }
         }
-        if (new_pad[0] & PAD_CRICLE) {
+        if (new_pad[0] & PAD_CIRCLE) {
             oldselect = -4;
         }
         if (new_pad[0] & PAD_CROSS) {
