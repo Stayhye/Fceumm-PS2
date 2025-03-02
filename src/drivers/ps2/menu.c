@@ -193,10 +193,10 @@ static int menu_input(int port, int center_screen)
             Settings.offset_y = 0;
             change = 1;
         }
-        if (new_pad[port] & PAD_CIRCLE) {
+        if (new_pad[port] & PAD_CROSS) {
             selected = 1;
         }
-        if (new_pad[port] & PAD_CROSS) {
+        if (new_pad[port] & PAD_CIRCLE) {
         }
         if ((new_pad[port] == Settings.PlayerInput[port][0]
           || new_pad[port] == PAD_TRIANGLE) && !center_screen) {
@@ -701,7 +701,7 @@ static int menu_input_controls(int port, int is_changing_button, u32 *new_button
                 if (new_pad[port] & PAD_UP) {
                     change = -1;
                 }
-                if (new_pad[port] & PAD_CROSS) {
+                if (new_pad[port] & PAD_CIRCLE) {
                     selected = 1;
                 }
                 if ((new_pad[port] == Settings.PlayerInput[port][0]
